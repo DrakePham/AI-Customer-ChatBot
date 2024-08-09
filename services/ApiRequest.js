@@ -41,6 +41,7 @@ export const getStyledText = async (content, context) => {
     default:
       return content;
   }
+  console.log(process.env.NEXT_PUBLIC_OPENAI_API_MODEL);
   const styledContent = openAIChatWrapper(promptValue);
   return styledContent;
 }
