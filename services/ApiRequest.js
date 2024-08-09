@@ -10,13 +10,16 @@ const openAIChatWrapper = async (promptValue) => {
   const configuration = new Configuration({
     apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
   });
+  const headers = {
+    'Authorization': `Bearer ${process.env.NEXT_PUBLIC_OPENAI_API_KEY}`,
+  };
   const openai = new OpenAIApi(configuration);
-
+  delete configuration.baseOptions.headers['User-Agent'];
   const completion = await openai.createChatCompletion({
     model: process.env.NEXT_PUBLIC_OPENAI_API_MODEL,
     messages: [{ "role": "assistant", "content": "You are a helpful assistant." }, { role: "user", content: promptValue }],
   });
-
+  
   return completion.data.choices[0].message.content;
 };
 
