@@ -1,6 +1,8 @@
 import Header from "../component/header/header";
 import Head from "next/head";
 import App from "../component/app/app";
+import ChatBox from "../component/app/components/chatbox";
+
 export default function home() {
   return (
     <>
@@ -9,6 +11,7 @@ export default function home() {
       </Head>
       <Header />
       <App />
+      <ChatBox />
     </>
   );
 }
