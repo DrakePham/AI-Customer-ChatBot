@@ -1,7 +1,7 @@
 import Header from "../component/header/header";
 import Head from "next/head";
 import App from "../component/app/app";
-import ChatBox from "../component/app/components/chatbox";
+import ChatBox from "../component/app/Chatbox";
 
 export default function home() {
   return (

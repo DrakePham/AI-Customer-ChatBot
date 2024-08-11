@@ -15,3 +15,4 @@ export const getResult = async ({ content, type, context }) => {
       return "Invalid type";
   }
 };
+
