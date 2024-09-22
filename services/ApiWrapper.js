@@ -1,4 +1,4 @@
-import { getStyledText, getToneSuggestion } from "./ApiRequest";
+import { openAIChatWrapper, getStyledText, getToneSuggestion } from './ApiRequest';
 
 /** 
  * Method to get the result from the API on the basis of the type of request
@@ -15,3 +15,6 @@ export const getResult = async ({ content, type, context }) => {
       return "Invalid type";
   }
 };
+
+// Export the imported functions
+export { openAIChatWrapper, getStyledText, getToneSuggestion };
